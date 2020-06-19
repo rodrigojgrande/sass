@@ -1,0 +1,116 @@
+$text-color: white;
+
+body {
+    background-color: #7159c1;
+    color: $text-color;
+}
+
+@mixin box-shadow($color) {
+    box-shadow: 3px 3px 4px 1px $color;
+}
+
+@mixin make-bold($bool){
+    @if $bool == true {
+        font-weight: bold;
+    }
+}
+
+@mixin text-effect($val){
+    @if $val == danger {
+        color: red;
+    }
+    @else if $val == alert {
+        color: gray;
+    }
+    @else {
+        color: black;
+    }
+}
+
+.container {
+    $text-color2: orange;
+
+    @include box-shadow(rgba(0, 0, 0, 0.6));
+    width: 200px;
+    height: 200px;
+    background-color: white;
+
+    p {
+        color: $text-color2;
+        @include make-bold(true);
+        @include text-effect(danger);
+    }
+}
+
+@for $i from 1 through 5{
+    .text-#{$i} {
+        font-size: 15px * $i
+    }
+}
+
+@for $i from 1 to 5{
+    .text-#{$i} {
+        font-size: 15px * $i
+    }
+}
+
+
+// REPETIÇÕES
+$colors: (color1: blue, color2: red, color3: yellow);
+
+// @each $key, $color in $colors {
+//     .#{$color}-text {color: $color;}
+// }
+
+// $colors: (blue, red, yellow);
+
+// @each $key, $color in $colors {
+//     .#{$color}-text {color: $color;}
+// }
+
+// @each $key, $color in blue, red, yellow {
+//     .#{$color}-text {color: $color;}
+// }
+
+//Funções
+@each $key, $color in $colors  {
+    .#{$color}-text {color: lighten($color, 10);}
+}
+
+//Herança
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    @extend .flex; //Cria herança
+    flex-direction: column;
+    height: 100%;
+
+}
+
+//Referencial
+a {
+    color: green;
+
+    // Referencia a tag a
+    &:hover{ 
+        color: greenyellow;
+    }
+    
+}
+
+@function set-text-color ($color){
+    @if lightness($color) > 70 {
+    @return #333;
+}
+    @else{
+        @return white;
+    }
+}
+
+//Criar componentes
+
+

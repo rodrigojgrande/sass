@@ -1,0 +1,95 @@
+body {
+  background-color: #7159c1;
+  color: white;
+}
+
+.container {
+  -webkit-box-shadow: 3px 3px 4px 1px rgba(0, 0, 0, 0.6);
+          box-shadow: 3px 3px 4px 1px rgba(0, 0, 0, 0.6);
+  width: 200px;
+  height: 200px;
+  background-color: white;
+}
+
+.container p {
+  color: orange;
+  font-weight: bold;
+  color: red;
+}
+
+.text-1 {
+  font-size: 15px;
+}
+
+.text-2 {
+  font-size: 30px;
+}
+
+.text-3 {
+  font-size: 45px;
+}
+
+.text-4 {
+  font-size: 60px;
+}
+
+.text-5 {
+  font-size: 75px;
+}
+
+.text-1 {
+  font-size: 15px;
+}
+
+.text-2 {
+  font-size: 30px;
+}
+
+.text-3 {
+  font-size: 45px;
+}
+
+.text-4 {
+  font-size: 60px;
+}
+
+.blue-text {
+  color: #3333ff;
+}
+
+.red-text {
+  color: #ff3333;
+}
+
+.yellow-text {
+  color: #ffff33;
+}
+
+.flex, body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+}
+
+a {
+  color: green;
+}
+
+a:hover {
+  color: greenyellow;
+}
+/*# sourceMappingURL=main.css.map */
